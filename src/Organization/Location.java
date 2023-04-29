@@ -1,22 +1,36 @@
 /* FILE NAME   : Location.java
  * PROGRAMMER  : DS6
  * @author     : Sokolov Dmitry
- * LAST UPDATE : 13.03.2023
+ * LAST UPDATE : 29.04.2023
  * PURPOSE     : Location Organization
  */
 
 package Organization;
 
+/**
+ * Class for working with field of organization: location
+ */
 public class Location {
     private int x;
     private long y;
     private String town; //Поле не может быть null
+
+    /**
+     * Constructor of field: Location
+     * @param x x-coordinate of town of organization
+     * @param y y-coordinate of town of organization
+     * @param town town of organization
+     */
     public Location(int x, long y, String town){
         this.x = x;
         this.y = y;
         this.town = town;
     }
 
+    /**
+     * Constructor of field: location, for command update
+     * @param postalAddress postal address of organization in format string
+     */
     public Location(String postalAddress) {
         if (postalAddress.contains(", "))
         {
@@ -39,11 +53,19 @@ public class Location {
         }
     }
 
+    /**
+     * Function to output location in terminal
+     */
     public void print(){
         System.out.println(" - Location 'x' = " + this.x);
         System.out.println(" - Location 'y' = " + this.y);
         System.out.println(" - Town = " + this.town);
     }
+
+    /**
+     * Function to get location in string format xml
+     * @return xml
+     */
     public String getLocationinXML(){
         String start = "\t\t\t<Location>\n";
         String x = "\t\t\t\t<x>" +  String.valueOf(this.x) + "</x>\n";
@@ -53,6 +75,10 @@ public class Location {
         return start + x + y + town + end;
     }
 
+    /**
+     * Function to get town in format string
+     * @return town in format string
+     */
     public String getTown() {
         return town;
     }

@@ -1,23 +1,32 @@
 package Commands;
 
 import Organization.*;
-
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-
 import static java.lang.Integer.parseInt;
 
+/**
+ * Class for working with command: update
+ */
 public class Update extends Command{
     private static final String name = "update";
     private final static String description = ": Update value of field for organization from collection;";
 
+    /**
+     * @return name of command
+     */
     public static String getName(){return name;}
+    /**
+     * @return description of command
+     */
     public static String getDescription(){return description;}
+
+    /**
+     * Function to update values of organization in collection by id
+     */
     public static void update(){
-        if (arg.length == 0)
-        {
+        if (arg.length == 0) {
             System.out.println("Please input command in format: update 'id'");
             return;
         }
@@ -51,7 +60,6 @@ public class Update extends Command{
                     t.setType(type); break;}
                 case "6": case "postalAddress": case "postal address": case "postal_address": case "postal addres": case "postal_addres": case "postal adress": case "postal_adress": case "postal adres": case "postal_adres": {System.out.print("Input postal address '<string> zipcode, <string> street, <int> x, <long> y, <string> town': ");
                     scan.nextLine(); t.setPostalAddress(scan.nextLine()); break;}
-
 
                 default:
                     System.out.println("Unexpected value");

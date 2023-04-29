@@ -1,10 +1,16 @@
 package Commands;
 
+/**
+ * Class for work with command: help
+ */
 public class Help extends Command{
 
     private static final String name = "help";
     private static final String description = ": Output all commands;";
 
+    /**
+     * Function print all command
+     */
     public static void help(){
         if (arg.length > 0){
             System.out.println("I don't understand u\n What does it mean: " + getName() + " " + arg[0]);
@@ -29,8 +35,12 @@ public class Help extends Command{
     }
 
 
+    /**
+     * @return name of command
+     */
     public static String getName(){return name;}
+    /**
+     * @return description of command
+     */
     public static String getDescription(){return description;}
-
-    //public static void help(Object o) {}
 }

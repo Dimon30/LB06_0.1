@@ -11,13 +11,25 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Vector;
 
+/**
+ * Class for actions with command: execute_script
+ */
 public class Execute_script extends Command{
     private static final String name = "execute_script";
     private final static String description = ": Load commands from file;";
 
+    /**
+     * @return name of command
+     */
     public static String getName(){return name;}
+    /**
+     * @return description of command
+     */
     public static String getDescription(){return description;}
 
+    /**
+     * Function take file and execute commands
+     */
     public static void execute_script(){
         if (arg.length == 0) {
             System.out.println("Please input filename in format: 'execute_script filename'\n");
@@ -38,10 +50,8 @@ public class Execute_script extends Command{
             }
         } catch (FileNotFoundException e){
             System.out.println("Sorry, I don't find this file: '" + filename + "'");
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            System.out.println("Something is going wrong(class: Execute_script)");
         }
     }
 }

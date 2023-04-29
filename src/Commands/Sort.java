@@ -1,8 +1,8 @@
 package Commands;
 
-import Auxiliary.SortOrganizaton;
 import Organization.Organization;
 
+import java.util.Comparator;
 import java.util.Vector;
 
 public class Sort extends Command{
@@ -16,5 +16,8 @@ public class Sort extends Command{
             System.out.println("I don't understand u\n What does it mean: " + getName() + " " + arg[0]);
             return;
         }
-        SortOrganizaton.sort(org);}
+        org = org.stream()
+                .sorted(Comparator.comparing(Organization::getName))
+                .collect(Vector<Organization>::new, Vector<Organization>::add,Vector<Organization>::addAll);
+    }
 }

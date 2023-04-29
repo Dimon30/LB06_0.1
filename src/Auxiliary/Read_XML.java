@@ -1,24 +1,28 @@
-
-
 package Auxiliary;
-import Organization.*;
 
+import Organization.*;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
-import static Auxiliary.SortOrganizaton.sort;
 
+/**
+ * Class for read xml file
+ */
 public class Read_XML {
+    /**
+     * Function which read xml file and create collection of organizations
+     * @param filename name of file where is description of organizations
+     * @return  collection of organizations
+     */
     public static Vector<Organization> CreateVector(String filename) {
         File file = new File(filename);
-        String str = "";
+        StringBuilder str = new StringBuilder();
         try (Scanner reader = new Scanner(new FileReader(file.getAbsolutePath()))) {
             while (reader.hasNext()) {
-                str += reader.next();
+                str.append(reader.next());
             }
         }
         catch (Exception e){
@@ -44,7 +48,7 @@ public class Read_XML {
         String town = null;
         String lastUpdate = null;
         try {
-            lines = str.split("><");
+            lines = str.toString().split("><");
             for (String el : lines) {
                 if (el.equalsIgnoreCase("organization")) {
                     arr.add(new HashMap<String, String>());
@@ -127,10 +131,7 @@ public class Read_XML {
         }
         catch(Exception e){
             System.out.println("Not download xml file");
-            System.out.println(e.getMessage());
-            e.printStackTrace();
         }
-        finally {sort(org); return org;}
-
+        finally {org.stream().sorted(Comparator.comparing(Organization::getName)); return org;}
     }
 }

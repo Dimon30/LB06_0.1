@@ -1,12 +1,15 @@
 /* FILE NAME   : OrganizationType.java
  * PROGRAMMER  : DS6
  * @author     : Sokolov Dmitry
- * LAST UPDATE : 13.03.2023
+ * LAST UPDATE : 29.04.2023
  * PURPOSE     : Type of Organization
  */
 
 package Organization;
 
+/**
+ * Enum class for working with type of organizations
+ */
 public enum OrganizationType {
     COMMERCIAL("commercial"),
     PUBLIC("public"),
@@ -16,9 +19,19 @@ public enum OrganizationType {
 
     private final String name;
 
+    /**
+     * Constructor of field: OrganizationType
+     * @param name name of organization type
+     */
     OrganizationType(String name){
         this.name = name;
     }
+
+    /**
+     * Function to get type of organizations in format object: OrganizationType
+     * @param s type of organization in string format
+     * @return type of organization
+     */
     public static OrganizationType findTypebyName(String s) {
         switch (s) {
             case ("commercial"), ("Commercial"), ("COMMERCIAL") -> {return COMMERCIAL;}
@@ -29,6 +42,12 @@ public enum OrganizationType {
             default -> {return null;}
         }
     }
+
+    /**
+     * Function to get organization type in string format
+     * @param t organization type
+     * @return type organization type in string format
+     */
     public static String findNamebyType(OrganizationType t) {
         return t.name;
     }

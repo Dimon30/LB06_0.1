@@ -1,15 +1,15 @@
 /* FILE NAME   : Coordinates.java
  * PROGRAMMER  : DS6
  * @author     : Sokolov Dmitry
- * LAST UPDATE : 10.03.2023
+ * LAST UPDATE : 29.04.2023
  * PURPOSE     : Coordinates Organization
  */
 
 package Organization;
 
-import java.util.Arrays;
-import java.util.regex.Pattern;
-
+/**
+ * Class to working with field of organization: Coordinates
+ */
 public class Coordinates {
     private long x; //Максимальное значение поля: 890
     private double y;
@@ -17,9 +17,15 @@ public class Coordinates {
     public Coordinates(long x, double y){
         if (x >= 890)
             this.x = 890;
-        this.x = x;
+        else
+            this.x = x;
         this.y = y;
     }
+
+    /**
+     * Constructor of field: coordinates
+     * @param coord coordinates in format string
+     */
     public Coordinates(String coord){
         //String[] split = Arrays.stream(coord.split(Pattern.quote("[,\s]\s*"))).map(String::trim).toArray(String[]::new);
         String[] split = coord.split(", ");
@@ -33,11 +39,19 @@ public class Coordinates {
             System.out.println("Sorry. You input incorrect datas");
         }
     }
+
+    /**
+     * Function to output in terminal field: coordinates
+     */
     public void print(){
         System.out.println(" - Coordinates 'x' = " + this.x);
         System.out.println(" - Coordinates 'y' = " + this.y);
     }
 
+    /**
+     * Function to get coordinates in format xml
+     * @return xml coordinates in format string-xml
+     */
     public String getCoordinatesinXML(){
         String start = "\t\t<Coordinates>\n";
         String x = "\t\t\t<x>" + String.valueOf(this.x) + "</x>\n";

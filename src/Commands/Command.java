@@ -2,12 +2,12 @@ package Commands;
 
 import Organization.Organization;
 import Server.Client;
-
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
-import java.util.function.Consumer;
 
+/**
+ * Class for describe commands in app
+ */
 public abstract class Command {
     protected static Vector<Organization> org = Client.getOrganizations();
     protected static Scanner scan = new Scanner(System.in);
@@ -36,17 +36,33 @@ public abstract class Command {
             throw new RuntimeException(e);
         }
     }
-    public static boolean command(String command_arg) throws InvocationTargetException, IllegalAccessException {
-        String command = command_arg.split(" ").length > 1 ? command_arg.split(" ")[0] : command_arg;
-        String[] ar = command_arg.split(" ").length > 1 ? Arrays.copyOfRange(command_arg.split(" "), 1, command_arg.split(" ").length) : new String[0];
-        arg = ar;
-        if (!commandMap.containsKey(command)) {
-            System.out.println("-" + command + "-" + ": this command doesn't exist.");
-            return false;
+
+    /**
+     * Function to process commands
+     * @param command_arg command and argument in form string
+     * @return boolean command's processed or not
+     */
+    public static boolean command(String command_arg) {
+        try {
+            String command = command_arg.split(" ").length > 1 ? command_arg.split(" ")[0] : command_arg;
+            String[] ar = command_arg.split(" ").length > 1 ? Arrays.copyOfRange(command_arg.split(" "), 1, command_arg.split(" ").length) : new String[0];
+            arg = ar;
+            if (!commandMap.containsKey(command)) {
+                System.out.println("-" + command + "-" + ": this command doesn't exist.");
+                return false;
+            }
+            commandMap.get(command).invoke(null);
+            return true;
+        } catch (Exception e){
+            System.out.println("Command's not accepted(class: Command)");
         }
-        commandMap.get(command).invoke(null);
-        return true;
+        return false;
     }
+
+    /**
+     * Function to show collection with other order
+     * @param temp temporary collection
+     */
     public static void showOtherList(Vector<Organization> temp){
         org = temp;
         Show.show();

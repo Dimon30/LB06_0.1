@@ -1,9 +1,15 @@
 package Commands;
 
+/**
+ * Class for actions with command: exit
+ */
 public class Exit extends Command{
     private static final String name = "exit";
     private static final String description = ": exit;";
 
+    /**
+     * Function to abort program
+     */
     public static void exit(){
 
         if (arg.length > 0){
@@ -13,7 +19,12 @@ public class Exit extends Command{
         System.exit(30);
     }
 
-    public static String getDescription() {return description;}
-
-    public static String getName() {return name;}
+    /**
+     * @return name of command
+     */
+    public static String getName(){return name;}
+    /**
+     * @return description of command
+     */
+    public static String getDescription(){return description;}
 }

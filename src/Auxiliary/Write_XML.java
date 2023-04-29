@@ -1,27 +1,32 @@
 package Auxiliary;
 
 import Organization.Organization;
-
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Vector;
+import java.util.stream.Stream;
 
+/**
+ * Class for write collection in xml file
+ */
 public class Write_XML {
-    public static void Write(Vector<Organization> vec, String filename){
+    /**
+     * Function to write collection to xml file
+     * @param vec collection of organizations
+     * @param filename name of file where will be store collection
+     */
+    public static void Write(Stream<Organization> vec, String filename){
         try {
             FileOutputStream file = new FileOutputStream(filename);
             file.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Organizations>\n".getBytes());
-            for (Organization org : vec)
-                file.write(org.getXML().getBytes());
+            vec.forEach(o -> {
+                try {
+                    file.write(o.getXML().getBytes());
+                } catch (IOException e) {System.out.println("Datas don't written");}
+            });
             file.write("</Organizations>".getBytes());
             file.close();
-        } catch (FileNotFoundException e) {
-            //System.out.println("i dont find file");
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            //System.out.println("kal");
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            System.out.println("File's not written");
         }
     }
 }

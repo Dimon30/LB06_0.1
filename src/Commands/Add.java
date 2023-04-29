@@ -1,26 +1,30 @@
 package Commands;
 
-import Auxiliary.SortOrganizaton;
 import Organization.*;
-
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Scanner;
+import java.util.Comparator;
 import java.util.Vector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
+/**
+ * Class for actions with command: add
+ */
 public class Add extends Command{
     private static final String name = "add";
     private final static String description = ": Add new organization to collection;";
 
+    /**
+     * @return name of command
+     */
     public static String getName(){return name;}
+    /**
+     * @return description of command
+     */
     public static String getDescription(){return description;}
 
     /**
-     *
+     * Function add new organizations to collection
      */
     public static void add(){
         if (arg.length > 0){
@@ -119,8 +123,12 @@ public class Add extends Command{
             }
 
             Organization t = new Organization(name, xC, yC, LocalDateTime.now(), annualTurnover, type, new Address(zipCode, street, new Location(xL, yL, town)));
-            org.addElement(t);
-            SortOrganizaton.sort(org);
+            org = Stream
+                    .concat(org.stream(), Stream.of(t))
+                    .collect(Vector<Organization>::new, Vector<Organization>::add, Vector<Organization>::addAll);
+            org = org.stream()
+                    .sorted(Comparator.comparing(Organization::getName))
+                    .collect(Vector<Organization>::new, Vector<Organization>::add, Vector<Organization>::addAll);
         }catch (Exception e){
             e.printStackTrace();
             System.out.println("Oops... Something going wrong. Probably you input incorrect value.");
