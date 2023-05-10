@@ -20,10 +20,12 @@ public class Exit extends Command{
     }
 
     /**
+     * Function to get name of command
      * @return name of command
      */
     public static String getName(){return name;}
     /**
+     * Function to get description of command
      * @return description of command
      */
     public static String getDescription(){return description;}

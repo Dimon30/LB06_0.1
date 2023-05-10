@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Client:jar" />
+      <artifact name="Server:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="da55890e-081c-454a-878d-4e4ae910c856" name="Changes" comment="Copy from LB05">
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/artifacts/LB05_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/LB05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/bin/.org.eclipse.egit.core.cmp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/bin/LB05.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Auxiliary/FilterOrganizations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Auxiliary/Read_XML.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Auxiliary/SortOrganizaton.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Auxiliary/Write_XML.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Add.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Clear.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Command.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/CommandInt.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Execute_script.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Exit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/FilterByTypeAsc.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Help.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/History.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Info.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/PrintByAddressAscending.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/PrintByAddressDescending.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Remove.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Reorder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Save.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Show.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Sort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Commands/Update.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organization/Address.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organization/Coordinates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organization/Location.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organization/Organization.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organization/OrganizationType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Organizations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/Server/Client.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/build/manifest.mf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LB05/dfjkdjkfbds.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Client_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Server_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Client.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/Commands/TestCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/Server.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Auxiliary/Read_XML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Auxiliary/Write_XML.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Commands/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Commands/TestCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Modules/ProcessCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Modules/ReadRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Modules/SendResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organization/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organization/Coordinates.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organization/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organization/Organization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organization/OrganizationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Organizations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/Server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Execute_script.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Execute_script.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Exit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Exit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/FilterByTypeAsc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/FilterByTypeAsc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Help.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/History.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/PrintByAddressAscending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/PrintByAddressAscending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/PrintByAddressDescending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/PrintByAddressDescending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Remove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Remove.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Reorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Reorder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Show.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Commands/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Commands/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organization/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organization/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organization/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organization/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organization/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organization/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organization/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organization/Organization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Organization/OrganizationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Organization/OrganizationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Client/Client.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2P3OrXgAvPYUN4fqO4iwOsNKj3m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "create.test.in.the.same.root": "true",
+    "jdk.selected.JAVA_MODULE": "corretto-15",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Commands" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Commands" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Client" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-15" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Client.Client" />
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LB06" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Server.Server" />
+      <module name="Server" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Server" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Server" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.Main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Server" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="da55890e-081c-454a-878d-4e4ae910c856" name="Changes" comment="" />
+      <created>1682682510374</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682682510374</updated>
+      <workItem from="1682682514558" duration="95167000" />
+    </task>
+    <task id="LOCAL-00001" summary="Copy from LB05">
+      <created>1682682845061</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682682845061</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: added processing collection with stream api&#10;feat: add javadoc">
+      <created>1682806400384</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682806400384</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Copy from LB05" />
+    <MESSAGE value="feat: added processing collection with stream api&#10;feat: add javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added processing collection with stream api&#10;feat: add javadoc" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Commands/Help.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

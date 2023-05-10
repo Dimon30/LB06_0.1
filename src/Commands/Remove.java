@@ -14,10 +14,12 @@ public class Remove extends Command{
     private final static String description = ": Remove organization by id;";
 
     /**
+     * Function to get name of command
      * @return name of command
      */
     public static String getName(){return name;}
     /**
+     * Function to get description of command
      * @return description of command
      */
     public static String getDescription(){return description;}

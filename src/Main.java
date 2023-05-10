@@ -7,11 +7,10 @@
 
 import java.io.*;
 import java.util.*;
-
 import Auxiliary.Read_XML;
 import Auxiliary.Write_XML;
 import Organization.*;
-import Server.Client;
+import Client.Client;
 
 
 /**

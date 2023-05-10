@@ -1,22 +1,27 @@
 package Commands;
 
 import Organization.Organization;
-import Server.Client;
+import Client.Client;
+
+import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.*;
 
 /**
  * Class for describe commands in app
  */
-public abstract class Command {
+public class Command implements Serializable {
     protected static Vector<Organization> org = Client.getOrganizations();
     protected static Scanner scan = new Scanner(System.in);
     protected static String[] arg = new String[0];
     protected static Iterable<String> history = Client.getHistory();
-    private static Map<String, Method> commandMap = new HashMap<String, Method>();
+    private static Map<String, Object> commandMap = new HashMap<String, Object>();
+
+    private Command(String command, String[] arg){
+
+    }
     static {
         try {
-            commandMap.put(Help.getName(), Help.class.getMethod(Help.getName()));
             commandMap.put(Info.getName(), Info.class.getMethod(Info.getName()));
             commandMap.put(Show.getName(), Show.class.getMethod(Show.getName()));
             commandMap.put(Add.getName(), Add.class.getMethod(Add.getName()));
@@ -36,6 +41,20 @@ public abstract class Command {
             throw new RuntimeException(e);
         }
     }
+    public static Object make_command(String command_arg){
+        String[] split = command_arg.split("\s*");
+        String command = split.length > 1 ? split[0] : command_arg;
+        String[] arg = split.length > 1 ? Arrays.copyOfRange(split, 1, split.length) : new String[0];
+
+        commandMap.put(Help.getName(), new Help(command_arg));
+        if (!commandMap.containsKey(command)) {
+            System.out.println("-" + command + "-" + ": this command doesn't exist.");
+            return null;
+        }
+        // Возвращает команду (потчи в сериализованном виде)
+        Command com = new Command(command, arg);
+        return com;
+    }
 
     /**
      * Function to process commands
@@ -51,7 +70,7 @@ public abstract class Command {
                 System.out.println("-" + command + "-" + ": this command doesn't exist.");
                 return false;
             }
-            commandMap.get(command).invoke(null);
+            //commandMap.get(command).invoke(null);
             return true;
         } catch (Exception e){
             System.out.println("Command's not accepted(class: Command)");
@@ -68,4 +87,5 @@ public abstract class Command {
         Show.show();
         org = Client.getOrganizations();
     }
+
 }

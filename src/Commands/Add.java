@@ -4,21 +4,21 @@ import Organization.*;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 import java.util.Vector;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * Class for actions with command: add
  */
 public class Add extends Command{
-    private static final String name = "add";
+    private final static String name = "add";
     private final static String description = ": Add new organization to collection;";
-
     /**
+     * Function to get name of command
      * @return name of command
      */
     public static String getName(){return name;}
     /**
+     * Function to get description of command
      * @return description of command
      */
     public static String getDescription(){return description;}

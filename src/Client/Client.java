@@ -1,13 +1,13 @@
-package Server;
+package Client;
 
 import Commands.*;
 import Organization.Organization;
+import Server.Server;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 /**
- * Class for work with client
+ * Class for work with client app
  */
 public class Client {
     private Vector<Organization> org;
@@ -44,21 +44,43 @@ public class Client {
     /**
      * Loop of client commands.
      */
-    public void loop(Scanner scan) {
+    private void loop(Scanner scan) {
         while (true) {
+
+            /* Reading command from console */
             System.out.print("Input command: ");
             if (!scan.hasNext()) {break;}
 
             String command_arg = scan.nextLine();
             try {
-                if (Command.command(command_arg))
-                    memorize(command_arg);
+                if(!isCommand(command_arg)) {
+                    System.out.println("I don't understand you\nWhat does it mean" + command_arg);
+                    continue;
+                }
+
+                Object command = Command.make_command(command_arg);
+                /** TODO
+                 * Только команда должна быть сериализованна и передаваться через протокол TCP
+                 */
+                Server server = new Server();
+                memorize(command_arg);
+
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Something wrong with command(class: Client)");
             }
         }
         scan.close();
+    }
+
+    /**
+     * Function to check validation of command which input user
+     * @param command_arg command + argument which user input in console
+     * @return command is in stack of commands
+     */
+    private boolean isCommand(String command_arg) {
+
+        return false;
     }
 
     private final Vector<Organization> cyganskie_fokusy() {return client.org;}

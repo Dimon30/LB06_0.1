@@ -9,7 +9,15 @@ public class Sort extends Command{
     private static final String name = "sort";
     private final static String description = ": Sort collection;";
 
+    /**
+     * Function to get name of command
+     * @return name of command
+     */
     public static String getName(){return name;}
+    /**
+     * Function to get description of command
+     * @return description of command
+     */
     public static String getDescription(){return description;}
     public static void sort(){
         if (arg.length > 0){
